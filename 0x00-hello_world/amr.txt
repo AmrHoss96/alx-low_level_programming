@@ -1,0 +1,13 @@
+Step 1/4) Preprocess main.c to generate main.i:
+$: gcc -E main.c -o main.i
+NOTE: You could call the C preprocessor directly as well:
+$: cpp main.c -o main.i
+
+Step 2/4) Compile main.i to generate main.s:
+$: gcc -S main.i -o main.s
+
+Step 3/4) Assemble main.s to generate main.o:
+$: as main.s -o main.o
+NOTE: You can combine the aforementioned steps 1, 2 and 3 by using the -c (small C) flag of gcc:
+$: gcc -c main.s -o main.o // OR $: gcc -c main.c -o main.o
+
