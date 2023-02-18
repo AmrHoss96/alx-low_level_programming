@@ -1,0 +1,6 @@
+
+========== 5-print_numbers.c ==========
+5-print_numbers.c:3: ERROR: trailing whitespace
+5-print_numbers.c:11: WARNING: Missing a blank line after declarations
+total: 1 errors, 1 warnings, 18 lines checked
+main
