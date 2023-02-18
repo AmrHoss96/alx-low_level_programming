@@ -10,20 +10,20 @@ int main(void)
 
 	int b;
 
-	while (a < 10 && b < 10)
+	for (a = 0; a < 9; a++)
 	{
-	if (a < 10)
+		b = 1;
+		while (a < 10 && b < 10)
 	{
-	putchar(a + '0');
+		putchar(a + '0');
+		if (b < 10)
+		{
+			putchar(b + '0');
+		}
+		putchar(44);
+		putchar(32);
+		b++;
 	}
-	if (b < 10)
-	{
-	putchar(b + '0');
-	}
-	putchar(44);
-	putchar(32);
-	b++;
 	}
 	return (0);
 }
-
