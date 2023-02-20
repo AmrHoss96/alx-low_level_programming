@@ -1,29 +1,37 @@
 #include <stdio.h>
 /**
-  * main - main block
-  * description - program that prints all possible different comb of two digits
+  * main - Entry point
+  * 
   * Return: 0 Always (Sucess)
   */
 int main(void)
 {
-	int a;
 
-	int b;
+	int i,j,k;
 
-	for (a = 0; a < 9; a++)
+	i = 0;
+
+	while (i < 100)
 	{
-		b = 1;
-		while (a < 10 && b < 10)
-	{
-		putchar(a + '0');
-		if (b < 10)
+
+	 k = i / 10; /* first number */
+	
+	 j = i % 10; /* second number */
+
+		if (k < j)
 		{
-			putchar(b + '0');
+			putchar(k + '0');
+			putchar(j + '0');
+		
+		if (i < 89)
+		{
+			putchar(',');
+			putchar(' ');
 		}
-		putchar(44);
-		putchar(32);
-		b++;
 	}
+
+			i++;
 	}
+	putchar('\n');
 	return (0);
 }
