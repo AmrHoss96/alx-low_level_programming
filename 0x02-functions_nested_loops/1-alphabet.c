@@ -1,12 +1,13 @@
 #include "main.h"
 /**
-  * main - code 
-  *
-  * retun: 0 
+  * print_alphabet - entry point
+  * code to print alphabet
+  * retun: 0
   */
 void print_alphabet(void)
 {
 	char i;
+
 	for (i = 'a'; i <= 'z'; i++)
 	{
 		_putchar(i);
