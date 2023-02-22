@@ -1,13 +1,11 @@
 #include "main.h"
 /**
-  * main - entry point
+  * print_alphabet - entry point
   * code that prints alphabet 10 times
   * return: 0 ( main)
   */
-int main(void)
+void print_alphabet_x10(void)
 {
-	void print_alphabet_x10(void);
-	{
 		int i;
 
 		for (i = 0; i <= 10; i++)
@@ -20,7 +18,6 @@ int main(void)
 				j++;
 			}
 		}
-	}
+
 		_putchar('\n');
-		return (0);
 }
