@@ -8,7 +8,7 @@ char *leet(char *s)
 {
 	int i, j;
 
-	char leet_map[][2] = {'a', '4', 'e', '3', 'o', '0', 't', '7', 'l', '1', '\0'};
+	char map[5][2] = {{'a', '4'}, {'e', '3'}, {'o', '0'}, {'t', '7'}, {'l', '1'}};
 
 	char upper_case[] = {'A', 'E', 'O', 'T', 'L', '\0'};
 
@@ -16,9 +16,9 @@ char *leet(char *s)
 	{
 		for (j = 0; j < 5; j++)
 		{
-			if (s[i] == (leet_map[j][0]) || s[i] == (upper_case[j]))
+			if (s[i] == (map[j][0]) || s[i] == (upper_case[j]))
 			{
-				s[i] = leet_map[j][1];
+				s[i] = map[j][1];
 				break;
 			}
 		}
