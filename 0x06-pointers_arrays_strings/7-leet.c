@@ -1,37 +1,27 @@
 #include "main.h"
 /**
  * *leet - function that changes letters to number
- * @str: pointer to a string
- * Return: str
+ * @s: pointer to a string
+ * Return: s
  */
-char *leet(char *str)
-{   
-       	char *ptr = str;
-	
-	while (*ptr != '\0')
+char *leet(char *s)
+{
+	int i, j;
+
+	char leet_map[5][2] = {'a', '4', 'e', '3', 'o', '0', 't', '7', 'l', '1'};
+
+	char upper_case[] = {'A', 'E', 'O', 'T', 'L'};
+
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (*ptr == 'a' || *ptr == 'A')
+		for (j = 0; j < 5; j++)
 		{
-			*ptr = '4';
+			if (s[i] == (leet_map[j][0]) || s[i] == (upper_case[j]))
+			{
+				s[i] = leet_map[j][1];
+				break;
+			}
 		}
-		else if (*ptr == 'e' || *ptr == 'E')
-		{
-			*ptr = '3';
-		}
-		else if (*ptr == 'o' || *ptr == 'O')
-		{
-			*ptr = '0';
-		}
-		else if (*ptr == 't' || *ptr == 'T')
-		{
-			*ptr = '7';
-		}
-		else if (*ptr == 'l' || *ptr == 'L')
-		{
-			*ptr = '1';
-		}
-		ptr++;
 	}
-	return (str);
+	return (s);
 }
-	
