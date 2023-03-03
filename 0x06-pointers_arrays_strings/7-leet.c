@@ -8,9 +8,9 @@ char *leet(char *s)
 {
 	int i, j;
 
-	char leet_map[5][2] = {'a', '4', 'e', '3', 'o', '0', 't', '7', 'l', '1'};
+	char leet_map[][2] = {'a', '4', 'e', '3', 'o', '0', 't', '7', 'l', '1', '\0'};
 
-	char upper_case[] = {'A', 'E', 'O', 'T', 'L'};
+	char upper_case[] = {'A', 'E', 'O', 'T', 'L', '\0'};
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
