@@ -4,7 +4,8 @@
  * @n: int number
  * Return: 1 if prime, 0 otherwise
  */
-
+int _sqrt(int x, int i);
+int hai(int n, int d);
 int is_prime_number(int n)
 {
 	if (n < 2)
