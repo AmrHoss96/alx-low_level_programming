@@ -5,7 +5,7 @@
  * Return: If no natural square root, return -1. Else return natural
  * square root
  */
-
+int halp(int c, int i);
 int _sqrt_recursion(int n)
 {
 	return (halp(n, 1));
