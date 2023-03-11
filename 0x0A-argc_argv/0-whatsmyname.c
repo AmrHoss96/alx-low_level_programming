@@ -2,8 +2,9 @@
 #include <stdlib.h>
 /**
  * main - entry point
- *
- * Return: argv
+ * @argc: counts of arguments
+ * @argv: argument vector
+ * Return:0
  */
 int main(int argc, char *argv[])
 {
