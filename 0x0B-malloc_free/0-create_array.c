@@ -22,7 +22,7 @@ char *create_array(unsigned int size, char c)
 	{
 		while (size > 0)
 		{
-			pointer[size] = c;
+			pointer[size - 1] = c;
 			size--;
 		}
 	}
