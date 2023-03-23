@@ -4,6 +4,7 @@
  * @array: string
  * @size: size of array
  * @cmp: function pointer
+ * Return: -1 for no match, index of int for match
  */
 int int_index(int *array, int size, int (*cmp)(int))
 {
