@@ -1,46 +1,41 @@
 #include "3-calc.h"
 #include <stdlib.h>
-#include <stddef.h>
 #include <stdio.h>
+
 /**
- * main - main fucntion
- * @argc: number of arguments
- * @argv: argument vector
- * Return: exit 98 if num of args is wrong
-*/
+ * main - main function
+ * @argc: argument count
+ * @argv: string of arguments in array
+ * Return: 0
+ */
+
 int main(int argc, char *argv[])
 {
-	int num1, num2;
-
-	int result;
-	int (*func)(int, int);
-
-	char op;
+	int a, b;
+	int (*o)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-	func = get_op_func(argv[2]);
-
-	if (!func)
+	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	op = *argv[2];
-	if ((op == '/' || op == '%') && num2 == 0)
+	o = get_op_func(argv[2]);
+	if (o == NULL)
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 
-	result = func(num1, num2);
-	printf("%d\n", result);
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	printf("%d\n", o(a, b));
+
 	return (0);
 }
