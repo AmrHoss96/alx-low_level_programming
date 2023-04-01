@@ -18,7 +18,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
 	{
-		printf("Error\n");
 		return (NULL);
 	}
 	if (str == NULL)
@@ -33,15 +32,11 @@ list_t *add_node_end(list_t **head, const char *str)
 		free(new_node);
 		return (NULL);
 	}
-
 	new_node->str = new_string;
 	new_node->len = length;
 	new_node->next = NULL;
-
 	if (*head == NULL)
-	{
 		*head = new_node;
-	}
 	else
 	{
 		last_node = *head;
@@ -51,6 +46,5 @@ list_t *add_node_end(list_t **head, const char *str)
 		}
 		last_node->next = new_node;
 	}
-
 	return (new_node);
 }
