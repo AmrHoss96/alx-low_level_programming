@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
+
 /**
  * free_listint - adds node to a linked list
  * @head: pointer to a pointer of the first node
@@ -8,7 +9,8 @@
  */
 void free_listint(listint_t *head)
 {
-        listint_t *current, *ptr;
+        listint_t *current;
+        listint_t *ptr;
 
         current = head;
         while (current != NULL)
