@@ -3,7 +3,7 @@
 #include "lists.h"
 
 /**
- * free_listint2 - adds node to a linked list
+ * free_listint2 - frees a linked list and sets the head to NULL
  * @head: pointer to a pointer of the first node
  * Return: void
  */
