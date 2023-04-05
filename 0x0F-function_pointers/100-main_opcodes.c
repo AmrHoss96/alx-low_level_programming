@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 /**
- * main - entry point
- * @argc: argument count
- * @argv: argument vector
- * Return: always 0 if success
-*/
+ * main - prints its own opcodes
+ * @argc: number of arguments
+ * @argv: arrayay of arguments
+ *
+ * Return: Always 0 (Success)
+ */
 int main(int argc, char *argv[])
 {
 	int count, i;
@@ -16,18 +18,22 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
+
 	count = atoi(argv[1]);
+
 	if (count < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
+
 	array = (char *)main;
+
 	for (i = 0; i < count; i++)
 	{
-		if (i == (count - 1))
+		if (i == count - 1)
 		{
-			printf("#2hhx\n", array[i]);
+			printf("%02hhx\n", array[i]);
 			break;
 		}
 		printf("%02hhx ", array[i]);
