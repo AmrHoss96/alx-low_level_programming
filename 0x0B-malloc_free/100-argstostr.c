@@ -9,7 +9,7 @@
 */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k;
+	int i, j, x;
 	int size;
 	char *arg;
 
@@ -32,20 +32,20 @@ char *argstostr(int ac, char **av)
 	if (arg == NULL)
 		return (NULL);
 	i = 0;
-	k = 0;
+	x = 0;
 	while (i < ac)
 	{
 		j = 0;
 		while (av[i][j])
 		{
-			arg[k] = av[i][j];
+			arg[x] = av[i][j];
 			j++;
-			k++;
+			x++;
 		}
-		arg[k] = '\n';
-		k++;
+		arg[x] = '\n';
+		x++;
 		i++;
 	}
-	arg[k] = '\0';
+	arg[x] = '\0';
 	return (arg);
 }
